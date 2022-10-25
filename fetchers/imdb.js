@@ -129,7 +129,7 @@ const imdb = () => {
                 g.push($(ele).text().trim())
             })
             genre = g.join(' | ')
-            const storyline = $(".ipc-html-content.ipc-html-content--base > div").text().trim()
+            const storyline = $(".ipc-html-content-inner-div").text().trim()
             const actor_name = []
             const actor_image = []
             $(".title-cast-item__avatar > div > div > img").each((index, ele) => {
@@ -141,7 +141,8 @@ const imdb = () => {
             const run = $('.sc-f65f65be-0.ktSkVi > ul > li:nth-child(1) > div').text().trim()
             const check = $(".sc-7ab21ed2-1.jGRxWM").text().trim()
             const rating = check.length < 3 ? check : check.substring(0, 3)
-            const runtime = run.replace(release_date, "")
+            const runtime = $('.ipc-metadata-list-item__content-container').text().trim()
+//             const runtime = run.replace(release_date, "")
             const title = $('.sc-94726ce4-1.iNShGo > h1').text().trim()
             const release_year = checkyear(release_date)
 
