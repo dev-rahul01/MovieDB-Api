@@ -26,6 +26,10 @@ app.get("/search/:mvname/" , async(req,res) =>{
     
 })
 
+app.get('/home' , (req,res)=>{
+    res.json({status : "false"})
+})
+
 
 // listening to heart
 // const hostname = '127.0.0.1';
